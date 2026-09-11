@@ -1,72 +1,70 @@
 var ITEMS=[
-{id:'chatgpt',n:'ChatGPT',d:'OpenAI flagship AI assistant. GPT-4o, DALL-E image generation, file analysis, web browsing, and advanced reasoning.',c:'ai',em:'\u2728',pg:'pg-chatgpt',tiers:[
-{n:'Plus',p:16,dur:'1 month',fmt:'Account access',desc:'GPT-4o, GPT-4, DALL-E, web browsing, 40 messages/3h on GPT-4'},
-{n:'Team',p:25,dur:'1 month',fmt:'Team workspace',desc:'Plus features + admin console, shared workspaces, higher limits'},
-{n:'Pro',p:50,dur:'1 month',fmt:'Priority access',desc:'Everything in Team + o1 preview, priority access, unlimited GPT-4o'}
+{id:'chatgpt',n:'ChatGPT',d:'OpenAI flagship AI assistant. GPT-4o, DALL-E, web browsing.',c:'ai',img:'assets/products/png/chatgpt.png',tiers:[
+{n:'Plus',p:16,dur:'1 month',fmt:'Account access',desc:'GPT-4o, GPT-4, DALL-E, web browsing, 40 msgs/3h'},
+{n:'Team',p:25,dur:'1 month',fmt:'Team workspace',desc:'Admin console, shared workspaces, higher limits'},
+{n:'Pro',p:50,dur:'1 month',fmt:'Priority access',desc:'o1 preview, priority access, unlimited GPT-4o'}
 ]},
-{id:'claude',n:'Claude',d:'Anthropic AI assistant. Extended thinking, vision, large context window, and strong coding abilities.',c:'ai',em:'\uD83C\uDF1F',pg:'pg-claude',tiers:[
-{n:'Pro',p:13,dur:'1 month',fmt:'Client account',desc:'Claude 3.5 Sonnet, 5x more usage, extended thinking, priority access'},
-{n:'Team',p:20,dur:'1 month',fmt:'Team workspace',desc:'Pro features + admin dashboard, shared workspaces, SSO ready'},
-{n:'Enterprise',p:40,dur:'1 month',fmt:'Full access',desc:'Everything in Team + audit logs, unlimited usage, custom data retention'}
+{id:'claude',n:'Claude',d:'Anthropic AI assistant. Extended thinking, vision, 200k context.',c:'ai',img:'assets/products/png/claude.png',tiers:[
+{n:'Pro',p:13,dur:'1 month',fmt:'Client account',desc:'Claude 3.5 Sonnet, 5x usage, extended thinking'},
+{n:'Team',p:20,dur:'1 month',fmt:'Team workspace',desc:'Admin dashboard, shared workspaces, SSO'},
+{n:'Enterprise',p:40,dur:'1 month',fmt:'Full access',desc:'Audit logs, unlimited usage, custom retention'}
 ]},
-{id:'perplexity',n:'Perplexity',d:'AI-powered search engine with real-time citations. Pro reasoning, file uploads, and API credits.',c:'ai',em:'\uD83D\uDD0D',pg:'pg-perplexity',tiers:[
-{n:'Pro',p:10,dur:'1 month',fmt:'Client account',desc:'Unlimited Pro searches, $5/mo API credits, file uploads, image generation'},
-{n:'Enterprise',p:20,dur:'1 month',fmt:'Team account',desc:'Pro features + team libraries, admin controls, priority support'}
+{id:'perplexity',n:'Perplexity',d:'AI search engine with real-time citations and deep research.',c:'ai',img:'assets/products/png/perplexity.png',tiers:[
+{n:'Pro',p:10,dur:'1 month',fmt:'Client account',desc:'Unlimited Pro searches, $5 API credits, file uploads'},
+{n:'Enterprise',p:20,dur:'1 month',fmt:'Team account',desc:'Team libraries, admin controls, priority support'}
 ]},
-{id:'spotify',n:'Spotify',d:'Music streaming with 100M+ tracks, podcasts, and AI-powered discovery.',c:'music',em:'\uD83C\uDFB5',pg:'pg-spotify',tiers:[
-{n:'Individual',p:10,dur:'1 month',fmt:'Gift code',desc:'Ad-free music, offline download, unlimited skips, 1 account'},
-{n:'Duo',p:13,dur:'1 month',fmt:'Gift code',desc:'Everything in Individual for 2 people living together'},
-{n:'Family',p:16,dur:'1 month',fmt:'Gift code',desc:'Up to 6 accounts, family mix playlists, explicit content filter'},
-{n:'Student',p:5,dur:'1 month',fmt:'Gift code',desc:'Discounted Individual plan with Hulu or SHOWTIME'}
+{id:'spotify',n:'Spotify',d:'Music streaming with 100M+ tracks, podcasts, AI discovery.',c:'music',img:'assets/products/png/spotify.png',tiers:[
+{n:'Individual',p:10,dur:'1 month',fmt:'Gift code',desc:'Ad-free, offline, unlimited skips'},
+{n:'Duo',p:13,dur:'1 month',fmt:'Gift code',desc:'2 accounts, duo mix playlists'},
+{n:'Family',p:16,dur:'1 month',fmt:'Gift code',desc:'Up to 6 accounts, family mix'},
+{n:'Student',p:5,dur:'1 month',fmt:'Gift code',desc:'Discounted Individual plan'}
 ]},
-{id:'yt-premium',n:'YouTube Premium',d:'Ad-free YouTube, background play, offline download, and YouTube Music Premium.',c:'music',em:'\u25B6\uFE0F',pg:'pg-yt',tiers:[
-{n:'Individual',p:8,dur:'1 month',fmt:'Code / Setup',desc:'Ad-free videos, background play, offline, YouTube Music included'},
-{n:'Family',p:16,dur:'1 month',fmt:'Code / Setup',desc:'Up to 6 family members, all Individual Premium features'},
-{n:'Student',p:4,dur:'1 month',fmt:'Code / Setup',desc:'Discounted Individual plan with student verification'}
+{id:'yt',n:'YouTube Premium',d:'Ad-free YouTube, background play, offline, YouTube Music.',c:'music',img:'assets/products/png/yt.png',tiers:[
+{n:'Individual',p:8,dur:'1 month',fmt:'Code / Setup',desc:'Ad-free, background, offline, Music included'},
+{n:'Family',p:16,dur:'1 month',fmt:'Code / Setup',desc:'Up to 6 family members'},
+{n:'Student',p:4,dur:'1 month',fmt:'Code / Setup',desc:'Discounted plan'}
 ]},
-{id:'apple-music',n:'Apple Music',d:'Apple music streaming. Lossless audio, Spatial Audio with Dolby Atmos, and curated playlists.',c:'music',em:'\uD83C\uDFB6',pg:'pg-apple',tiers:[
-{n:'Individual',p:11,dur:'1 month',fmt:'Gift code',desc:'100M+ songs, lossless, Spatial Audio, 1 account'},
-{n:'Family',p:17,dur:'1 month',fmt:'Gift code',desc:'Up to 6 family members, individual recommendations'},
-{n:'Student',p:6,dur:'1 month',fmt:'Gift code',desc:'Discounted plan with Apple Music student pricing'}
+{id:'apple',n:'Apple Music',d:'Lossless audio, Spatial Audio Dolby Atmos, 100M+ tracks.',c:'music',img:'assets/products/png/apple.png',tiers:[
+{n:'Individual',p:11,dur:'1 month',fmt:'Gift code',desc:'100M+ songs, lossless, Spatial Audio'},
+{n:'Family',p:17,dur:'1 month',fmt:'Gift code',desc:'Up to 6 family members'},
+{n:'Student',p:6,dur:'1 month',fmt:'Gift code',desc:'Student pricing'}
 ]},
-{id:'canva',n:'Canva Pro',d:'Professional design platform. Templates, brand kit, background remover, AI image generation.',c:'work',em:'\uD83C\uDFA8',pg:'pg-canva',tiers:[
-{n:'Pro',p:12,dur:'1 month',fmt:'Personal plan',desc:'1 person, 100M+ premium templates, brand kit, BG remover, AI generator'},
-{n:'Teams',p:25,dur:'1 month',fmt:'Team plan',desc:'3-5 people, shared brand kit, collaboration tools, admin controls'}
+{id:'canva',n:'Canva Pro',d:'Professional design. Templates, brand kit, BG remover, AI gen.',c:'work',img:'assets/products/png/canva.png',tiers:[
+{n:'Pro',p:12,dur:'1 month',fmt:'Personal plan',desc:'100M+ templates, brand kit, BG remover, AI generator'},
+{n:'Teams',p:25,dur:'1 month',fmt:'Team plan',desc:'3-5 people, shared brand kit, collaboration'}
 ]},
-{id:'notion',n:'Notion',d:'All-in-one workspace for notes, docs, wikis, projects, and databases.',c:'work',em:'\uD83D\uDCD3',pg:'pg-notion',tiers:[
-{n:'Plus',p:10,dur:'1 month',fmt:'Personal workspace',desc:'Unlimited pages & blocks, 10 guest collaborators, file uploads up to 5GB'},
-{n:'Business',p:18,dur:'1 month',fmt:'Team workspace',desc:'SAML SSO, advanced permissions, bulk PDF export, 250 guests'},
-{n:'Enterprise',p:30,dur:'1 month',fmt:'Full access',desc:'Audit log, advanced security, dedicated success manager, unlimited API'}
+{id:'notion',n:'Notion',d:'All-in-one workspace. Notes, docs, wikis, projects, databases.',c:'work',img:'assets/products/png/notion.png',tiers:[
+{n:'Plus',p:10,dur:'1 month',fmt:'Personal workspace',desc:'Unlimited pages, 10 guests, 5GB uploads'},
+{n:'Business',p:18,dur:'1 month',fmt:'Team workspace',desc:'SAML SSO, advanced permissions, 250 guests'},
+{n:'Enterprise',p:30,dur:'1 month',fmt:'Full access',desc:'Audit log, security, dedicated success manager'}
 ]},
-{id:'m365',n:'Microsoft 365',d:'Office suite and cloud storage. Word, Excel, PowerPoint, Outlook, and 1TB OneDrive.',c:'work',em:'\uD83D\uDCBB',pg:'pg-m365',tiers:[
-{n:'Personal',p:50,dur:'1 year',fmt:'License key',desc:'1 person, all Office apps, 1TB OneDrive, premium Outlook'},
-{n:'Family',p:70,dur:'1 year',fmt:'License key',desc:'Up to 6 people, 6TB total OneDrive, family safety features'}
+{id:'m365',n:'Microsoft 365',d:'Office suite + 1TB OneDrive. Word, Excel, PowerPoint, Outlook.',c:'work',img:'assets/products/png/m365.png',tiers:[
+{n:'Personal',p:50,dur:'1 year',fmt:'License key',desc:'All Office apps, 1TB OneDrive, premium Outlook'},
+{n:'Family',p:70,dur:'1 year',fmt:'License key',desc:'Up to 6 people, 6TB total, family safety'}
 ]},
-{id:'steam',n:'Steam',d:'Gift cards for the world largest PC gaming platform.',c:'play',em:'\uD83C\uDFAE',pg:'pg-steam',tiers:[
-{n:'$10',p:10,dur:'one-time',fmt:'Gift card',desc:'$10 Steam Wallet credit for games and DLC'},
+{id:'steam',n:'Steam',d:'Gift cards for the largest PC gaming platform.',c:'play',img:'assets/products/png/steam.png',tiers:[
+{n:'$10',p:10,dur:'one-time',fmt:'Gift card',desc:'$10 Steam Wallet credit'},
 {n:'$25',p:25,dur:'one-time',fmt:'Gift card',desc:'$25 Steam Wallet credit'},
 {n:'$50',p:50,dur:'one-time',fmt:'Gift card',desc:'$50 Steam Wallet credit'}
 ]},
-{id:'psn',n:'PlayStation',d:'Gift cards for PlayStation Store. Games, DLC, and PS Plus subscriptions.',c:'play',em:'\uD83C\uDFC6',pg:'pg-psn',tiers:[
+{id:'psn',n:'PlayStation',d:'Gift cards for PlayStation Store. Games, DLC, PS Plus.',c:'play',img:'assets/products/png/psn.png',tiers:[
 {n:'$10',p:10,dur:'one-time',fmt:'Gift card',desc:'$10 PSN Wallet credit'},
 {n:'$25',p:25,dur:'one-time',fmt:'Gift card',desc:'$25 PSN Wallet credit'},
 {n:'$50',p:50,dur:'one-time',fmt:'Gift card',desc:'$50 PSN Wallet credit'}
 ]},
-{id:'xbox',n:'Xbox',d:'Xbox Game Pass and gift cards for the Xbox ecosystem.',c:'play',em:'\uD83D\uDC7E',pg:'pg-xbox',tiers:[
-{n:'Game Pass Core',p:10,dur:'1 month',fmt:'Code',desc:'Online multiplayer, 25+ games catalog, deals and discounts'},
-{n:'Game Pass Standard',p:15,dur:'1 month',fmt:'Code',desc:'Hundreds of games, online multiplayer, day-one releases'},
-{n:'Game Pass Ultimate',p:20,dur:'1 month',fmt:'Code',desc:'Standard + EA Play, cloud gaming, PC Game Pass included'}
+{id:'xbox',n:'Xbox',d:'Game Pass and gift cards for the Xbox ecosystem.',c:'play',img:'assets/products/png/xbox.png',tiers:[
+{n:'Core',p:10,dur:'1 month',fmt:'Code',desc:'Online multiplayer, 25+ games'},
+{n:'Standard',p:15,dur:'1 month',fmt:'Code',desc:'Hundreds of games, day-one releases'},
+{n:'Ultimate',p:20,dur:'1 month',fmt:'Code',desc:'Standard + EA Play + cloud gaming'}
 ]}
 ];
 var tg=window.Telegram&&window.Telegram.WebApp;
 if(tg){try{tg.ready();tg.expand();if(tg.BackButton)tg.BackButton.hide();}catch(e){}}
-var cart=JSON.parse(localStorage.getItem('ms_c6')||'[]');
-var orders=JSON.parse(localStorage.getItem('ms_o6')||'[]');
-var refCount=parseInt(localStorage.getItem('ms_r6')||'0');
+var cart=JSON.parse(localStorage.getItem('ms_c7')||'[]');
+var orders=JSON.parse(localStorage.getItem('ms_o7')||'[]');
 var currentView='home';
 var viewHistory=[];
 var detailItem=null;
-var selectedTier=null;
 var API=window.location.origin;
 var uid=(tg&&tg.initDataUnsafe&&tg.initDataUnsafe.user&&tg.initDataUnsafe.user.id)||0;
 var refCode='MS'+(uid||Math.floor(Math.random()*99999));
@@ -102,7 +100,7 @@ var items=ITEMS.filter(function(x){return cat==='all'||x.c===cat;});
 for(var i=0;i<items.length;i++){
 var it=items[i];var d=document.createElement('div');d.className='product';
 d.onclick=(function(item){return function(){openDetail(item);};})(it);
-d.innerHTML='<div class="product-img '+it.pg+'"><span class="product-emoji">'+it.em+'</span><span class="product-label">'+it.n+'</span></div><div class="product-bottom"><span class="product-name">'+it.n+'</span><span class="product-price">from $'+it.tiers[0].p+'</span></div>';
+d.innerHTML='<div class="product-img"><img src="'+it.img+'" alt="'+it.n+'" style="width:100%;height:100%;object-fit:cover;display:block"></div><div class="product-bottom"><span class="product-name">'+it.n+'</span><span class="product-price">from $'+it.tiers[0].p+'</span></div>';
 el.appendChild(d);
 }
 }
@@ -114,30 +112,30 @@ $('d-desc').textContent=item.d;
 $('d-dur').textContent=item.tiers.length+' plans';
 $('d-fmt').textContent=item.tiers[0].fmt;
 $('d-price').textContent='from $'+item.tiers[0].p;
-var h=$('d-hero');h.className='detail-img '+item.pg;
-h.innerHTML='<span class="product-emoji">'+item.em+'</span><span class="product-label">'+item.n+'</span>';
+var h=$('d-hero');h.className='detail-img';
+h.innerHTML='<img src="'+item.img+'" alt="'+item.n+'" style="width:100%;height:100%;object-fit:cover;display:block">';
 showView('detail');
 }
 function showTiers(){
 if(!detailItem)return;
-var hero=$('tier-hero');hero.className='detail-img '+detailItem.pg;
-hero.innerHTML='<span class="product-emoji">'+detailItem.em+'</span><span class="product-label">'+detailItem.n+'</span>';
+var hero=$('tier-hero');hero.className='detail-img';
+hero.innerHTML='<img src="'+detailItem.img+'" alt="'+detailItem.n+'" style="width:100%;height:100%;object-fit:cover;display:block">';
 var list=$('tier-list');list.innerHTML='<div class="detail-tag" style="margin:0 0 4px">'+detailItem.c.toUpperCase()+'</div><h2 style="margin-bottom:12px">'+detailItem.n+'</h2>';
 for(var i=0;i<detailItem.tiers.length;i++){
 var t=detailItem.tiers[i];
 var d=document.createElement('div');d.className='tier-card';
-d.innerHTML='<span class="tier-ic">'+detailItem.em+'</span><div class="tier-info"><strong>'+t.n+'</strong><span>'+t.desc+'</span></div><span class="tier-price">$'+t.p+'</span>';
-d.onclick=(function(item,tier){return function(){selectedTier=tier;addToCartTier(item,tier);};})(detailItem,t);
+d.innerHTML='<div class="tier-ic"><img src="'+detailItem.img+'" style="width:32px;height:32px;border-radius:6px"></div><div class="tier-info"><strong>'+t.n+'</strong><span>'+t.desc+'</span></div><span class="tier-price">$'+t.p+'</span>';
+d.onclick=(function(item,tier){return function(){addToCartTier(item,tier);};})(detailItem,t);
 list.appendChild(d);
 }
 showView('tier');
 }
 function updateBadge(){var c=cart.length;var b=$('nav-badge');if(b){b.textContent=c;if(c>0)b.classList.remove('hidden');else b.classList.add('hidden');}}
-function saveCart(){localStorage.setItem('ms_c6',JSON.stringify(cart));updateBadge();}
-function saveOrders(){localStorage.setItem('ms_o6',JSON.stringify(orders));}
+function saveCart(){localStorage.setItem('ms_c7',JSON.stringify(cart));updateBadge();}
+function saveOrders(){localStorage.setItem('ms_o7',JSON.stringify(orders));}
 function addToCart(){showTiers();}
 function addToCartTier(item,tier){
-cart.push({id:item.id+'-'+tier.n,n:item.n+' '+tier.n,price:tier.p,dur:tier.dur,fmt:tier.fmt,em:item.em,pg:item.pg});
+cart.push({id:item.id+'-'+tier.n,n:item.n+' '+tier.n,price:tier.p,dur:tier.dur,fmt:tier.fmt,img:item.img});
 saveCart();viewHistory=viewHistory.filter(function(v){return v==='home'||v==='detail';});
 navTo('home');
 }
@@ -152,7 +150,7 @@ var total=0;
 for(var i=0;i<cart.length;i++){
 var it=cart[i];total+=it.price;
 var d=document.createElement('div');d.className='cart-item';
-d.innerHTML='<div class="cart-item-img '+(it.pg||'pg-chatgpt')+'">'+(it.em||'*')+'</div><div class="cart-item-info"><h4>'+it.n+'</h4><p>'+it.dur+' / '+it.fmt+'</p></div><div class="cart-item-right"><span class="cart-item-price">$'+it.price+'</span><button class="cart-item-del" data-idx="'+i+'">&#10005;</button></div>';
+d.innerHTML='<div class="cart-item-img"><img src="'+(it.img||'assets/products/png/chatgpt.png')+'" style="width:100%;height:100%;object-fit:cover;border-radius:8px"></div><div class="cart-item-info"><h4>'+it.n+'</h4><p>'+it.dur+' / '+it.fmt+'</p></div><div class="cart-item-right"><span class="cart-item-price">$'+it.price+'</span><button class="cart-item-del" data-idx="'+i+'">&#10005;</button></div>';
 list.appendChild(d);
 }
 var dels=list.querySelectorAll('.cart-item-del');
@@ -199,8 +197,8 @@ $('p-orders').textContent=orders.length;
 var tc=orders.reduce(function(s,o){return s+(o.cashback||0);},0);
 $('p-cb').textContent='$'+tc.toFixed(2);
 $('ref-code').textContent=refCode;
-$('p-refs').textContent=refCount;
-$('p-ref-e').textContent='$'+(refCount*2);
+$('p-refs').textContent=orders.length;
+$('p-ref-e').textContent='$'+(orders.length*2);
 }
 function copyRef(){
 if(navigator.clipboard)navigator.clipboard.writeText(refCode);
