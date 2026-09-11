@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: match-shop
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python server.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.12"
+      - key: WEBHOOK_URL
+        sync: false
+      - key: BOT_TOKEN
+        sync: false
+      - key: WEB_APP_URL
+        sync: false
+      - key: PUBLIC_URL
+        sync: false
+      - key: CRYPTOBOT_TOKEN
+        sync: false
+      - key: NOWPayments_API_KEY
+        sync: false
+      - key: NOWPayments_IPN_SECRET
+        sync: false
+      - key: PORT
+        value: "8080"

@@ -1,4 +1,4 @@
-import hashlib
+﻿import hashlib
 import hmac
 import json
 import logging
@@ -173,6 +173,19 @@ def cryptobot_webhook():
     data = request.get_json(silent=True)
     if data and data.get("update_type") == "invoice_paid":
         logging.info("CryptoBot: invoice paid")
+    return jsonify({"ok": True})
+
+
+@app.route("/tg-webhook", methods=["POST"])
+def tg_webhook():
+    """Telegram webhook endpoint - receives updates and forwards to bot."""
+    try:
+        from bot import _app
+        import asyncio
+        update = Update.de_json(request.get_json(force=True), _app.bot)
+        asyncio.run(_app.process_update(update))
+    except Exception as e:
+        logging.error("Webhook error: %s", e)
     return jsonify({"ok": True})
 
 @app.route("/api/health")

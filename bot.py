@@ -1,4 +1,4 @@
-import asyncio
+﻿import asyncio
 import json
 import logging
 import os
@@ -131,7 +131,9 @@ def run():
     if not token:
         raise RuntimeError('BOT_TOKEN not found')
     asyncio.set_event_loop(asyncio.new_event_loop())
-    app = Application.builder().token(token).build()
+    global _app
+    _app = Application.builder().token(token).build()
+    app = _app
     app.add_handler(CommandHandler('start', start))
     app.add_handler(CommandHandler('menu', menu))
     app.add_handler(CallbackQueryHandler(buttons))
