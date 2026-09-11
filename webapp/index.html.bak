@@ -1,0 +1,135 @@
+﻿<!doctype html>
+<html lang= ru>
+<head>
+  <meta charset=utf-8>
+  <meta name=viewport content=width=device-width ru">
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+ <title>MATCH SHOP</title>
+ <link rel="stylesheet" href="style.css">
+ <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+ <main class="app" id="app">
+
+ <header>
+ <button class="back-btn hidden id=backBtn aria-label=Назад>&#8592;</button>
+      <span class=brand>MATCH <b>&#10022;</b> SHOP</span>
+      <button class=bag id=bagBtn aria-label=Корзина>
+        <span class=bag-icon>&#9675;</span>
+        <span class=bag-count hidden id=bagCount>0</span>
+      </button>
+    </header>
+
+    <!-- HOME -->
+    <div class=screen active id=screenHome>
+      <section class=hero>
+        <div class=hero-copy>
+          <p>ГИЛЬДИЯ ЦИФРОВЫХ АРТЕФАКТОВ</p>
+          <h1>Найди свой<br>доступ.</h1>
+          <span>Работа · творчество · отдых</span>
+        </div>
+      </section>
+      <nav class=tabs aria-label=Категории>
+        <button class=active data-category=all>Все</button>
+        <button data-category=ai>AI</button>
+        <button data-category=music>Музыка</button>
+        <button data-category=work>Работа</button>
+        <button data-category=play>Игры</button>
+      </nav>
+      <section class=content>
+        <p class=kicker>АРТЕФАКТЫ ГИЛЬДИИ</p>
+        <div class=grid id=products></div>
+      </section>
+    </div>
+
+    <!-- DETAIL -->
+    <div class=screen id=screenDetail>
+      <div class=detail-sigil-area><div class=detail-sigil></div></div>
+      <div class=detail-body>
+        <span class=detail-cat id=detailCat></span>
+        <h1 class=detail-name id=detailName></h1>
+        <p class=detail-desc id=detailDesc></p>
+        <div class=detail-meta>
+          <div class=meta-item><span class=meta-label>Срок</span><span class=meta-value id=detailDuration></span></div>
+          <div class=meta-item><span class=meta-label>Формат</span><span class=meta-value id=detailFormat></span></div>
+        </div>
+        <div class=detail-price-row>
+          <div class=price-tag><span class=price-value id=detailPrice></span></div>
+          <button class=btn-gold id=addToCartBtn>В корзину</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- CART -->
+    <div class=screen id=screenCart>
+      <div class=cart-header>
+        <h1>Корзина</h1>
+        <button class=cart-clear hidden id=cartClear>Очистить</button>
+      </div>
+      <div class=cart-items id=cartItems></div>
+      <div class=cart-empty hidden id=cartEmpty>
+        <div class=empty-sigil></div>
+        <p>Корзина пуста</p>
+        <span>Добавь артефакты из каталога</span>
+      </div>
+      <div class=cart-footer hidden id=cartFooter>
+        <div class=cart-total><span>Итого</span><span class=total-value id=cartTotal></span></div>
+        <button class=btn-gold btn-checkout id=payBtn>Перейти к оплате</button>
+      </div>
+    </div>
+
+    <!-- PAY -->
+    <div class=screen id=screenPay>
+      <div class=pay-wrap>
+        <div class=pay-sigil></div>
+        <h1>Оплата</h1>
+        <p class=pay-sub>Выбери способ оплаты</p>
+        <div class=pay-total-row>
+          <span>Сумма к оплате</span>
+          <span class=pay-total-value id=payTotal></span>
+        </div>
+        <div class=pay-methods>
+          <button class=pay-method id=payCardBtn>
+            <span class=pm-icon>&#128179;</span>
+            <div class=pm-text>
+              <strong>Карта</strong>
+              <span>Visa / MasterCard · конвертация в крипту</span>
+            </div>
+            <span class=pm-arrow>&#8594;</span>
+          </button>
+          <button class=pay-method id=payCryptoBtn>
+            <span class=pm-icon>&#8383;</span>
+            <div class=pm-text>
+              <strong>Криптовалюта</strong>
+              <span>BTC · ETH · USDT · и др.</span>
+            </div>
+            <span class=pm-arrow>&#8594;</span>
+          </button>
+        </div>
+        <p class=pay-note>Оплата обрабатывается через защищённый шлюз. Карта конвертируется в крипту автоматически.</p>
+      </div>
+    </div>
+
+    <!-- CONFIRM -->
+    <div class=screen id=screenConfirm>
+      <div class=confirm-wrap>
+        <div class=confirm-sigil></div>
+        <h1>Заказ оформлен</h1>
+        <p>Гильдия уже готовит твой артефакт. Проверь Telegram — скоро свяжемся!</p>
+        <button class=btn-gold id=confirmDone>Вернуться в каталог</button>
+      </div>
+    </div>
+
+  </main>
+
+  <template id=card>
+    <article class=card><span class=sigil></span><div><h2></h2><p></p></div><div class=card-right><span class=card-price></span><span class=card-arrow>&#8594;</span></div></article>
+  </template>
+  <template id=cartItem>
+    <div class=cart-item><div class=cart-item-info><h3></h3><p></p></div><div class=cart-item-right><span class=cart-item-price></span><button class=cart-item-remove aria-label=Удалить>&#10005;</button></div></div>
+  </template>
+  <script src=app.js></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+Warning: Permanently added 'serveo.net' (ED25519) to the list of known hosts.
+Warning: remote port forwarding failed for listen port 80
+[31mAnonymous HTTP tunnel capacity is currently full. Register your SSH key at https://console.serveo.net/ssh/keys for priority access.
+[0m
+Connection to serveo.net closed by remote host.
+Connection to serveo.net closed.
