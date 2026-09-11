@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Card Payment - MATCH SHOP</title>
+<style>
+body{margin:0;padding:0;background:#0a0a14;color:#fff;font-family:sans-serif;display:flex;justify-content:center;align-items:center;min-height:100vh;}
+.box{background:#12121e;border:1px solid #333;border-radius:16px;padding:32px;max-width:400px;width:90%;text-align:center;}
+h2{margin:0 0 16px;font-size:20px;color:#e85d8a;}
+p{color:#aaa;font-size:14px;line-height:1.6;}
+.btn{display:block;margin:16px auto;padding:14px 24px;background:linear-gradient(135deg,#e85d8a,#ff6b9d);color:#fff;border:none;border-radius:12px;font-size:16px;font-weight:bold;cursor:pointer;text-decoration:none;width:80%;}
+.btn:hover{opacity:0.9;}
+.info{margin-top:16px;padding:12px;background:#1a1a2e;border-radius:8px;font-size:12px;color:#888;}
+.back{color:#e85d8a;text-decoration:none;font-size:14px;display:inline-block;margin-top:16px;}
+</style></head><body>
+<div class="box">
+<h2>&#128179; Card Payment</h2>
+<p>Pay with Visa / Mastercard.<br>Payment processed via Transak.<br>Funds arrive as USDT to your wallet.</p>
+<a class="btn" id="payBtn" href="#">Pay with Card</a>
+<div class="info">After payment, your order will be processed automatically.<br>Transaction takes 1-5 minutes.</div>
+<a class="back" href="javascript:history.back()">&#8592; Back</a>
+</div>
+<script>
+const params = new URLSearchParams(window.location.search);
+const amount = params.get("amount") || "10";
+const orderId = params.get("order") || "";
+const wallet = params.get("wallet") || "TON";
+// Transak config - replace YOUR_PARTNER_ID with your Transak partner ID
+const transakUrl = `https://global.transak.com/?apiKey=YOUR_PARTNER_ID&defaultCryptoCurrency=${wallet}&fiatAmount=${amount}&orderId=${orderId}&redirectUrl=${encodeURIComponent(window.location.origin)}`;
+document.getElementById("payBtn").href = transakUrl;
+document.querySelector("h2").textContent = `Pay $${amount} with Card`;
+</script>
+</body></html>

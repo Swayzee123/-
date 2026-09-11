@@ -159,6 +159,12 @@ var cb=Math.round(total*0.05*100)/100;
 $('cart-total-val2').textContent='$'+total+' (+'+cb.toFixed(2)+' cashback)';
 }
 function showPay2(){showView('pay');var t=cart.reduce(function(s,i){return s+i.price;},0);$('pay-total').textContent='$'+t;}
+function openCardPay(){
+var t=cart.reduce(function(s,i){return s+i.price;},0);
+var order=cart.map(function(i){return {id:i.id,name:i.name,price:i.price,tier:i.tier};});
+var ids=order.map(function(i){return i.id;}).join(',');
+window.open('pay-card.html?amount='+t+'&order='+ids,'_blank');
+}
 function doPay(method){
 var total=cart.reduce(function(s,i){return s+i.price;},0);
 var cb=Math.round(total*0.05*100)/100;
@@ -209,4 +215,5 @@ var a=el.nextElementSibling;
 if(a&&a.classList.contains('faq-a')){a.classList.toggle('hidden');var arr=el.querySelector('span:last-child');if(arr)arr.textContent=a.classList.contains('hidden')?'▼':'▲';}
 }
 renderCatalog();updateBadge();renderProfile();renderHistory();
+
 
