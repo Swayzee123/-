@@ -163,7 +163,7 @@ function doPay(method){
 var total=cart.reduce(function(s,i){return s+i.price;},0);
 var cb=Math.round(total*0.05*100)/100;
 var order=cart.map(function(i){return{id:i.id,name:i.n,price:i.price,duration:i.dur};});
-fetch(API+'/api/create-invoice',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({items:order,method:method})})
+fetch(API+'/api/create-invoice',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({items:order,method:'cryptobot'})})
 .then(function(r){return r.json();})
 .then(function(data){
 if(data.invoice_url){
@@ -209,3 +209,4 @@ var a=el.nextElementSibling;
 if(a&&a.classList.contains('faq-a')){a.classList.toggle('hidden');var arr=el.querySelector('span:last-child');if(arr)arr.textContent=a.classList.contains('hidden')?'▼':'▲';}
 }
 renderCatalog();updateBadge();renderProfile();renderHistory();
+
